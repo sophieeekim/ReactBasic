@@ -7,13 +7,12 @@ import Header from "Components/Header";
 
 export default() => (
     <Router> 
-        <>
+        <>{/* Router can have only one element */}
         <Header />
         <Switch> 
-        {/* Router can have only one element */}
         <Route path="/" exact component = {Home} />
         <Route path="/tv" exact component = {TV} />
-        <Route path="/tv/popular" render={() => <h1>Popular</h1>} />
+        {/* <Route path="/tv/popular" render={() => <h1>Popular</h1>} /> */}
         <Route path="/search" component = {Search} />
         <Redirect from="*" to="/" />
         </Switch>
